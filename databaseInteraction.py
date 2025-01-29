@@ -1,6 +1,5 @@
 import pandas as pd
 import mysql.connector
-# import sqlalchemy as db
 from mysql.connector import Error
 
 pd.set_option('display.max_rows', 50)
@@ -25,12 +24,6 @@ def openConnection():
         host = 'localhost',
         database='COMPANY'
     )
-    # user = 'root'
-    # password = 'password'
-    # host = 'localhost'
-    # database = 'COMPANY'
-    # engine = db.create_engine(f'mysql+pymysql://{user}:{password}@{host}:3306/{database}')
-    # conn = engine.connect()
     return conn
  
 # ------------------------ ADD EMPLOYEE ------------------------
@@ -325,10 +318,6 @@ def removeDepartment():
     conn.close()
     return
 
-
-
-
-
 # ------------------------ ADD DEPARTMENT LOCATION------------------------
 def addDeptLocation():
     conn = openConnection()
@@ -412,5 +401,5 @@ if __name__ == "__main__":
 
     # addDeptLocation() # working
     # removeDeptLocation() # working
-
+    
     print("Run using python3 -W ignore Interface.py")
